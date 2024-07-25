@@ -1,0 +1,18 @@
+# Connection Details
+name: "IssueManager"
+url: "jdbc:mysql://localhost:3306/mydb?allowPublicKeyRetrieval=true"
+userName: "user"
+password: "password"
+schemaName: "mydb"
+
+# Mapping Logic
+rootPackage: "com.ezeeinfo.issuemanager"
+
+insertMap:
+  CREATED_AT: CURRENT_TIMESTAMP
+  MODIFIED_AT:
+  MODIFIED_BY:
+updateMap:
+  MODIFIED_AT: CURRENT_TIMESTAMP
+  CREATED_AT:
+  CREATED_BY:
