@@ -7,7 +7,6 @@ import com.ezeeinfo.issuemanager.store.IssueStore;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
-import java.util.Calendar;
 
 /**
  * IssueService.

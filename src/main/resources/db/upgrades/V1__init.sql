@@ -30,5 +30,7 @@ CREATE TABLE issue (
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(80),
     description TEXT,
+    tenant varchar(50) not null,
+    status TEXT,
     PRIMARY KEY ( id )
 );

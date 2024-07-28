@@ -64,10 +64,12 @@ class IssueServiceTest {
         Issue newIssue = new Issue();
         newIssue.setId(tag.getId());
         newIssue.setTitle("HansiIssue");
-
+        newIssue.setStatus("INPROGRESS");
+        newIssue.setTenant("Tenant1");
         Optional<Issue> updatedIssue = tagService
                 .update("priya", tag.getId(), newIssue);
         Assertions.assertEquals("HansiIssue", updatedIssue.get().getTitle(), "Updated");
+        Assertions.assertEquals("INPROGRESS", updatedIssue.get().getStatus(), "Updated");
 
 //        Assertions.assertThrows(IllegalArgumentException.class, () -> {
 //            tagService
@@ -91,6 +93,7 @@ class IssueServiceTest {
                 anIssue());
         Issue newIssue = new Issue();
         newIssue.setTitle("HansiIssue");
+        newIssue.setTenant("tenant2");
         tagService.create("hari",
                 newIssue);
         List<Issue> listofCategories = tagService.list("hari");
@@ -107,6 +110,8 @@ class IssueServiceTest {
         Issue tag = new Issue();
         tag.setTitle("HariIssue");
         tag.setDescription("Description");
+        tag.setStatus("NEW");
+        tag.setTenant("tenant1");
         return tag;
     }
 }
