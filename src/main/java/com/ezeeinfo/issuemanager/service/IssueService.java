@@ -89,8 +89,8 @@ public class IssueService {
      * @return issues
      * @throws SQLException
      */
-    public List<Issue> list(final String userName) throws SQLException {
-        return this.issueStore.select()
+    public List<Issue> list(final String userName, final String tenant) throws SQLException {
+        return this.issueStore.select(IssueStore.tenant().eq(tenant))
                 .execute();
     }
 }

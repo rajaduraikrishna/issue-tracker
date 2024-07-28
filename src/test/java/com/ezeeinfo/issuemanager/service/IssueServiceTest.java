@@ -96,8 +96,8 @@ class IssueServiceTest {
         newIssue.setTenant("tenant2");
         tagService.create("hari",
                 newIssue);
-        List<Issue> listofCategories = tagService.list("hari");
-        Assertions.assertEquals(2, listofCategories.size());
+        List<Issue> listofCategories = tagService.list("hari", "tenant2");
+        Assertions.assertEquals(1, listofCategories.size());
 
     }
 
