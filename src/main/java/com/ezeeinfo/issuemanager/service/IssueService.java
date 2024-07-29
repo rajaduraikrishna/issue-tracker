@@ -86,10 +86,12 @@ public class IssueService {
     /**
      * Selects All.
      * @param userName
+     * @param tenant
      * @return issues
      * @throws SQLException
      */
-    public List<Issue> list(final String userName, final String tenant) throws SQLException {
+    public List<Issue> list(final String userName, final String tenant)
+            throws SQLException {
         return this.issueStore.select(IssueStore.tenant().eq(tenant))
                 .execute();
     }
