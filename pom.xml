@@ -101,6 +101,11 @@
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${jacoco.version}</version>
+				<configuration>
+					<includes>
+						<include>com/ezeeinfo/issuemanager/service/*</include>
+					</includes>
+				</configuration>
 				<executions>
 					<execution>
 						<id>default-prepare-agent</id>
