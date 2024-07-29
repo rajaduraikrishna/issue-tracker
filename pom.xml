@@ -79,7 +79,6 @@
 					</dependency>
 				</dependencies>
 				<configuration>
-					<configLocation>checkstyle.xml</configLocation>
 					<excludes>**/module-info.java</excludes>
 					<consoleOutput>true</consoleOutput>
 					<failsOnError>true</failsOnError>

@@ -1,0 +1,1 @@
+./mvnw.cmd -B clean jacoco:prepare-agent install jacoco:report
