@@ -1,4 +1,4 @@
-);
+
 CREATE TABLE app_user (
   `id` int NOT NULL AUTO_INCREMENT,
   `password` varchar(255) DEFAULT NULL,
@@ -34,3 +34,5 @@ CREATE TABLE issue (
     status TEXT,
     PRIMARY KEY ( id )
 );
+insert into roles(name) values('admin');
+insert into roles(name) values('user');
